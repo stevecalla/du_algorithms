@@ -33,6 +33,7 @@ describe('concertFlyer', function () {
   it(`should return false if given the strings "I\'ve got a lovely bunch of coconuts" and "two times two is four"`, function () {
     var magazine = 'I\'ve got a lovely bunch of coconuts';
     var flyer = 'I\'ve got some coconuts';
+    // var flyer = 'two times two is four'; //section
 
     var result = concertFlyer(magazine, flyer);
 

@@ -5,16 +5,22 @@
 
 var commonElement = function(arrA, arrB) {
   var elements = {};
+  console.log(arrA, arrB);
 
   for (var i = 0; i < arrA.length; i++) {
     var num = arrA[i];
     elements[num] = true;
+    console.log(num, arrA[i], elements[num])
   }
+  console.log(elements)
 
   for (var i = 0; i < arrB.length; i++) {
     var num = arrB[i];
 
-    if (elements[num] === true) {
+    
+    console.log(num, arrB[i])
+    if (elements[num]) {
+      console.log(num, arrB[i], elements[num])
       return num;
     }
   }
