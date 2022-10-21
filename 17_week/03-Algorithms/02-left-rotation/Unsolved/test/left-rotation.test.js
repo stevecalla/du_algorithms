@@ -52,6 +52,6 @@ describe('leftRotation', () => {
 
     leftRotation(arr, positions);
 
-    expect(arr).to.eql([3, 2, 1]);
+    expect(arr).to.eql([1, 2, 3]);
   });
 });

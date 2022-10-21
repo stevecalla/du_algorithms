@@ -2,24 +2,25 @@
 // You may NOT use the built-in reverse method
 
 const reverseInPlace = (arr) => {
-  console.log('1 =', arr)
-  console.log(arr.reverse())
-  console.log('------------')
+  // console.log('1 =', arr)
+  // console.log(arr.reverse())
+  // console.log('------------')
 
-  return arr.reverse
+  // return arr;
+
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    const temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+
+    left++;
+    right--;
+  }
 
   return arr;
-
-  return arr.reverse();
-  // console.log('hello')
-  let i = 0;
-  let text = 0;
-
-  while (i < arr.length) {
-    text += 1;
-    console.log(text);
-    i++;
-  }
 };
 
 reverseInPlace([1, 2, 3, 4, 5]);

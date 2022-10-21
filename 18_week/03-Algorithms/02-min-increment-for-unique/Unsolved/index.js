@@ -7,12 +7,13 @@ const minIncrement = function(nums) {
 
   for (let i = 0; i < nums.length; i++) {
     console.log(nums.length);
-    nums = nums.sort();
+    // nums = nums.sort();
+    nums = nums.sort((a, b) => a - b);
     console.log(nums);
     let start = nums[0];
     console.log(start)
 
-    diff = (i + 1) - nums[i];
+    diff = (start) - nums[i];
     if (diff > 0) {minSum = minSum + diff};
     console.log(diff, minSum);
   }
@@ -28,8 +29,5 @@ minIncrement(test);
 test2 = [2, 2, 1 ]; //6
 minIncrement(test2);
 
-test3 = [8,6,8,9,10]; //3
-minIncrement(test);
-
-// test4 = [2, 2, 1 ]; //6
-// minIncrement(test2);
+// test3 = [8,6,8,9,10]; //3
+// minIncrement(test3);
