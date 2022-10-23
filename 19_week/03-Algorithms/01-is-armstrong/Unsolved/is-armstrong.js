@@ -5,4 +5,19 @@
 
 // TODO: Complete the function below:
 
-var isArmstrong = function(num) {};
+var isArmstrong = function(num) {
+  let number = num;
+  let splitNum = number.toString().split('')
+
+  // convert each element to a number equal to the element raised to the power of the length of the array then get the sum (using reduce) of all the numbers in the array 
+  splitNum = splitNum.map(element => element ** splitNum.length ).reduce((cur, acc) => cur + acc);
+
+  console.log({ num, number, splitNum }, 'isArmstrong = ', num === splitNum);
+
+  //return if the num is equal to the sum of the parts raised to the length of the number
+  return num === splitNum;
+
+};
+
+isArmstrong(153);
+isArmstrong(11)
